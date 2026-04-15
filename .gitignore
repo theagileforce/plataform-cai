@@ -1,0 +1,35 @@
+# =========================
+# 1. Python / FastAPI (Backend)
+# =========================
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+.env
+.venv/
+
+# =========================
+# 2. Node.js / React (Frontend)
+# =========================
+node_modules/
+dist/
+build/
+.next/
+npm-debug.log*
+
+# =========================
+# 3. Docker e Dados Locais (Infra)
+# =========================
+pgdata/
+s3data/
+minio_data/
+postgres_data/
+
+# =========================
+# 4. Sistema Operacional e Editores
+# =========================
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/

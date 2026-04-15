@@ -1,0 +1,27 @@
+{
+  "name": "datarisk-churnai-platform",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Monorepo da Plataforma Datarisk ChurnAI (Micro-Frontends + Shared Kernel)",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "dev:frontend": "turbo run dev",
+    "build:frontend": "turbo run build",
+    "lint": "turbo run lint",
+    "test": "turbo run test",
+    "clean": "turbo run clean && rm -rf node_modules",
+    "dev:backend": "cd backend && uvicorn src.main:app --reload --port 8000",
+    "dev:all": "concurrently \"npm run dev:frontend\" \"npm run dev:backend\""
+  },
+  "devDependencies": {
+    "turbo": "latest",
+    "concurrently": "^8.2.2",
+    "prettier": "^3.2.5"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
